@@ -10,3 +10,5 @@ def test(request):
 def go(request):
     return HttpResponse("This is my first page")
 
+def index(request):
+    return render(request,"index.html")
