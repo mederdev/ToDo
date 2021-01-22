@@ -9,6 +9,11 @@
 
 <body>
     <h2>Hello Medo Hii</h2>
+    {%for todo in todo_list%}
+    <h3>{{todo.text}}-{{todo.created_at}}</h3>
+
+
+    {%endfor%}
 </body>
 
 </html>
