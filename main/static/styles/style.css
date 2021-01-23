@@ -53,7 +53,7 @@ section {
     border-radius: 5px;
     width: 24%;
     padding: 10px 15px;
-    background-color: cornsilk;
+    background-color: rgb(138, 94, 94);
     margin-bottom: 20px;
 }
 
@@ -74,7 +74,7 @@ section {
 }
 
 .todo_item.marked {
-    background-color: #ffe082;
+    background-color: #050400;
     border: 2px solid #fad66a;
 }
 
