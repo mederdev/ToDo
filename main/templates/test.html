@@ -14,8 +14,11 @@
 <body>
     <section>
         <div class="create_container">
-            <input type="text" class="create_input" placeholder="Жаны тапшырма жазуу" />
-            <button class="create_button">Кошуу</button>
+            <form action="{%url 'add-todo'%}" method="POST">
+                {%csrf_token%}
+                <input type="text" class="create_input" name="todo_text" placeholder="Жаны тапшырма жазуу" />
+                <button class="create_button">Кошуу</button>
+            </form>
         </div>
 
         <div class="todo_container">
