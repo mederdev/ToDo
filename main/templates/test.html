@@ -33,12 +33,23 @@
 
             ">
                 <div class="todo_item_header">
-                    <a href="{% url 'closed-todo' todo.id%}">
-                        <label class="checkbox_container">
-                        <input type="checkbox"/>
+
+                    <label class="checkbox_container">
+                        <input type="checkbox"
+                        {%if todo.is_closed%}
+                            checked
+                        {%endif%}
+                        />
                         <span class="checkmark"></span>
-                    </label></a>
-                    <h4>{{todo.text}}</h4>
+                    </label> {%if todo.is_closed%}
+                    <a href="{% url 'unclosed-todo' todo.id%}">
+                        <h4>{{todo.text}}</h4>
+                    </a>
+                    {%else%}
+                    <a href="{% url 'closed-todo' todo.id%}">
+                        <h4>{{todo.text}}</h4>
+                    </a>
+                    {%endif%}
                 </div>
                 <div class="todo_item_footer">
                     <p>{{todo.created_at}}</p>

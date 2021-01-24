@@ -53,12 +53,12 @@ section {
     border-radius: 5px;
     width: 24%;
     padding: 10px 15px;
-    background-color: rgb(138, 94, 94);
+    background-color: rgb(96, 177, 109);
     margin-bottom: 20px;
 }
 
 .todo_item.done {
-    background-color: #E0E0E0;
+    background-color: yellow;
     text-decoration: line-through;
     color: #757575;
 }
@@ -74,7 +74,7 @@ section {
 }
 
 .todo_item.marked {
-    background-color: #050400;
+    background-color: #dbb930;
     border: 2px solid #fad66a;
 }
 
@@ -87,6 +87,10 @@ section {
 .todo_item_header h4 {
     font-size: 18px;
     font-family: sans-serif;
+}
+
+.todo_item_header h4 a {
+    text-decoration: none;
 }
 
 .todo_item_footer {

@@ -39,9 +39,15 @@ def unmark_todo(request,id):
     return redirect(test)
 
 
-def closed_todo(request):
-    form=request.POST
-    text=form["is_closed"]
-    todo=ToDo(is_closed=True)
+def closed_todo(request,id):
+    todo=ToDo.objects.get(id=id)
+    todo.is_closed=True
+    todo.save()
+    return redirect(test)
+
+    
+def unclosed_todo(request,id):
+    todo=ToDo.objects.get(id=id)
+    todo.is_closed=False
     todo.save()
     return redirect(test)
