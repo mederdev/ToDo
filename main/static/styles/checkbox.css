@@ -3,8 +3,9 @@
     position: relative;
     padding-left: 35px;
     margin-bottom: 12px;
+    margin-top: 0;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 10px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;

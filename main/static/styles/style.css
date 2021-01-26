@@ -33,6 +33,7 @@ section {
     font-weight: bold;
     border-radius: 3px;
     cursor: pointer;
+    transition: linear 0.3s;
 }
 
 .create_button:active {
@@ -40,9 +41,14 @@ section {
     box-shadow: 2px 2px 5px 3px rgb(235, 226, 192);
 }
 
+.create_button:hover {
+    transform: scale(1.05);
+}
+
 .todo_container {
     padding: 30px 20px;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
     width: 100%;
@@ -53,20 +59,30 @@ section {
     border-radius: 5px;
     width: 24%;
     padding: 10px 15px;
-    background-color: rgb(96, 177, 109);
+    background-color: rgb(143, 163, 192);
     margin-bottom: 20px;
+    transition: 0.2s;
+}
+
+.todo_item:hover {
+    transform: scale(1.02);
 }
 
 .todo_item.done {
-    background-color: yellow;
+    background-color: rgb(100, 100, 96);
     text-decoration: line-through;
-    color: #757575;
+    color: #000000;
+}
+
+.todo_item h4 {
+    margin-top: 12px;
+    margin-left: 10px;
 }
 
 .todo_item.done h4,
 .todo_item.done p,
 .todo_item.done span {
-    color: #757575;
+    color: #ffffff;
 }
 
 .todo_item.done img {
@@ -74,8 +90,14 @@ section {
 }
 
 .todo_item.marked {
-    background-color: #dbb930;
+    background-color: #f7cf1f;
     border: 2px solid #fad66a;
+}
+
+.todo_item.marked h4,
+p,
+span {
+    color: #000000;
 }
 
 .todo_item_header {
@@ -89,11 +111,12 @@ section {
     font-family: sans-serif;
 }
 
-.todo_item_header h4 a {
+.todo_item_header a {
     text-decoration: none;
 }
 
 .todo_item_footer {
+    margin-top: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -113,4 +136,31 @@ section {
     height: 25px;
     margin: 0 5px;
     cursor: pointer;
+    transition: linear 0.3s;
+}
+
+.todo_item_footer img:hover {
+    transform: scale(1.2);
+}
+
+@media(max-width:600px) {
+    .todo_container {
+        padding-left: 10%;
+        flex-direction: column;
+    }
+    .todo_item {
+        border: 1px solid gray;
+        border-radius: 5px;
+        width: 250px;
+        padding: 10px 15px;
+        background-color: rgb(143, 163, 192);
+        margin-bottom: 20px;
+        transition: 0.2s;
+    }
+    .create_button {
+        margin: 20px 70px;
+    }
+    .create_input {
+        width: 250px;
+    }
 }
